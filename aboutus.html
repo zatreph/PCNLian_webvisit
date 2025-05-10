@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+      body {
+        background-color: #ffffff;
+        color: #003366;
+        font-family: Arial, sans-serif;
+      }
+  
+      .navbar {
+        background-color: #003366;
+        border: none;
+        border-radius: 0;
+      }
+  
+      .navbar-brand,
+      .navbar-nav > li > a {
+        color: white !important;
+      }
+
+      body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .section-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .section h3 {
+      color: #0056b3;
+      margin-bottom: 0.5rem;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .read-more-btn {
+      background-color: #0056b3;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .read-more-btn:hover {
+      background-color: #004494;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+
+    @media (max-width: 600px) {
+      .section-container {
+        padding: 1rem;
+      }
+
+      .section {
+        padding: 1rem;
+      }
+    }
+  
+    </style>
+</head>
+<body>
+ <div class="container">
+    <div class="row" style="align-items: center;">
+      
+      <div class="col-xs-12 col-sm-3 text-center">
+        <a href="piclogopcnl.jpg">
+          <img src="piclogopcnl.jpg" alt="PCNL Logo" class="img-responsive center-block" style="max-height: 120px;">
+        </a>
+      </div>
+  
+      <div class="col-xs-12 col-sm-9">
+        <div class="text-center text-sm-left">
+          <a href="ngalan" style="text-decoration: none; color: inherit;">
+            <h2 style="margin-top: 0;"><strong>PHILIPPINE COLLEGE OF NORTHWESTERN LUZON</strong></h2>
+            <h4>SAN ANTONIO, AGOO, LA UNION</h4>
+          </a>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">    
+        <ul class="nav navbar-nav">  
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="AcademicProgram.html">Academic Program</a></li>
+            <li><a href="Facultyandstaff.html">Faculty and Staff</a></li>
+            <li><a href="Announcement.html">Announcement</a></li>
+            <li><a href="Contactpage.html">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+  <div class="section-container">
+    <div class="section">
+      <h3>HISTORY</h3>
+      <p>
+        The Philippine College of Northern Luzon was established with the goal of offering accessible education to the region.
+      </p>
+      <button class="read-more-btn" onclick="openModal()">Read More</button>
+    </div>
+    <div class="section">
+      <h3>VISION</h3>
+      <p>
+        To be a distinctive learning institution acknowledged far and wide for its innovative and flexible approaches in working
+        with its students, stakeholders, and community to create a more just and human society and a more sustainable economy.
+      </p>
+    </div>
+    <div class="section">
+      <h3>MISSION</h3>
+      <p>
+        In support of its philosophy, PCNL mandates itself to provide advanced quality instruction in education, the arts and
+        humanities, science, technology, business, and other professional fields; to promote research; and to improve quality of life
+        through extension work.
+      </p>
+    </div>
+    <div class="section">
+      <h3>PHILOSOPHY</h3>
+      <p>
+        PCNL believes in holistic education that nurtures not only intellectual capacity but also values, creativity, and community
+        service, empowering students to contribute meaningfully to society.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="historyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Full History</h2>
+      <p>
+      INSTITUTIONAL PROFILE OF PHILIPPINE COLLEGE OF NORTHWESTERN LUZON HISTORY The demand for
+      globalization requires the development of highly-skilled and fully educated human resources to
+      meet the ever changing challenges for achieving competitive labor force. A Higher Educational 
+      Institution (HEI) was established after a survey was conducted by way of random sampling of parents
+      from La Union and from the north and Western towns of Pangasinan, whose children are in elementary
+      and secondary schools. After the organizational meeting of the incorporators, the organization
+      came up with the name Philippine College of Northwestern Luzon (PCNL) with articles of
+      incorporation and by-laws duly commission, approved Baguio by the Extension Securities 
+      Office on andtheExchange 20th day of February 2007. All CHED requirements were prepared
+      by the group including the province prospective courses to be offered namely Bachelor of
+      Science in Business Administration (BSBA), Bachelor of Science in Accountancy (BSA), 
+      Bachelor of Science in Secondary Elementary Education (BEE),and (BSE), Bachelor of Science
+      in Information Technology (BSIT). While the institution is waiting for the approval of 
+      Commission on Higher Education (CHED), the Board of Trustees composed of 9 members of 
+      the 15 incorporators likewise preferred the Technical Education and Skills Development 
+      authority (TESDA) requirements of offering short term courses. After the visit of TESDA 
+      technical panel, the institution was granted a permit to offer four short term courses 
+      namely: Computer Hardware Servicing NC 11, Computer 7 Programming NC 1V, PC Operation
+      NC 11, and Tourism Housekeeping NC 11 which started the 1st semester of the school
+      year 2007-2008. On February 2008, the courses offered by CHED are BSBA and BSA to be
+      offered during the first semester of school year 2008-2009.The following year, BSE
+      and BEE where approved followed by BSIT and CRIMINOLOGY respectively. PCNL is 
+      located in an environment conducive to learning and development. There are no
+      manufacturing and industrial establishments near the school and science 
+      laboratories. As of now PCNL have 2 divisions, the “New Building” and the
+      “Old Building”. The Old Building was located within the school premises of
+      Agoo Montessori Learning Center and the New Building located beside the laboratory,
+      an audio-visual room, spacious library and a faculty room and in front is an open
+      court with a newly-constructed stage. In New Building, there are 2 classrooms,
+      the administration room. Based on its 5year development plan (2007-2008), the
+      college will continue constructing and upgrading its facilities. The initial
+      investment was P 3,900,000.00 In 2007 the school was headed by the late Dr.
+      Alfredo B. Durante. He was a respective person and very approachable because
+      most of the time he is in school. After he passed away in 2015 the school
+      is now headed by Ricardo R. Querrer Jr. PHILOSOPHY PCNL believes in and
+      advocate the development of man’s vast potentials education and which,
+      provided given with a the appropriate stimulating and quality nurturing 
+      environment, shall make him emerge as a self-actualized, fully productive 
+      and responsible member of the society.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Modal functions
+    function openModal() {
+      document.getElementById('historyModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('historyModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('historyModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+  <footer class="footer" style="background-color: #f8f8f8; padding: 20px 0; border-top: 1px solid #ddd;">
+        <div class="container">
+          <div class="row">
+      
+            
+            <div class="col-sm-4 text-center text-sm-left">
+              <img src="PcnlLogo.png" alt="School Logo" style="height: 50px; margin-bottom: 10px;">
+              <p><strong>PCNL</strong><br>Invest Right And Make Your Future Bright</p>
+            </div>
+      
+            
+            <div class="col-sm-4 text-center">
+              <h4>Office of Admission</h4>
+              <p>📱 Cell: 0123-456789</p>
+              <p>☎ Tel: (072) 607 0406</p>
+              <p>✉ Email: pcnl0406@gmail.com</p>
+            </div>
+      
+            
+            <div class="col-sm-4 text-center text-sm-right">
+              <h4>Follow Us</h4>
+              <p>
+                <a href="https://www.facebook.com/PCNLOFFICIAL" target="_blank">
+                  <img src="fblogo.png" alt="Facebook" style="height: 24px;"> Official Page
+                </a>
+              </p>
+              <p>
+                <a href="https://www.facebook.com/profile.php?id=61551207150365" target="_blank">
+                  <img src="fblogo.png" alt="Facebook" style="height: 24px;"> 
+                  <img src="express.jpg" alt="Facebook" style="height: 24px;"> Express News
+                </a>
+              </p>
+            </div>
+      
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

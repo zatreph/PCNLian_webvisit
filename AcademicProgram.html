@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .thumbnail img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+      .section-content {
+        display: none;
+      }
+      .btn-auth {
+        margin-left: 10px;
+      }
+      @media (max-width: 768px) {
+        .btn-auth {
+          display: block;
+          margin: 10px 0;
+        }
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row" style="align-items: center;">
+      
+      <div class="col-xs-12 col-sm-3 text-center">
+        <a href="piclogopcnl.jpg">
+          <img src="piclogopcnl.jpg" alt="PCNL Logo" class="img-responsive center-block" style="max-height: 120px;">
+        </a>
+      </div>
+  
+      <div class="col-xs-12 col-sm-9">
+        <div class="text-center text-sm-left">
+          <a href="ngalan" style="text-decoration: none; color: inherit;">
+            <h2 style="margin-top: 0;"><strong>PHILIPPINE COLLEGE OF NORTHWESTERN LUZON</strong></h2>
+            <h4>SAN ANTONIO, AGOO, LA UNION</h4>
+          </a>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">  
+      <a class="navbar-brand" href="#">MySchool</a>
+    </div>
+    <ul class="nav navbar-nav">  
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academic Program <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="showSection('info')">General Info</a></li>
+          <li><a href="#" onclick="showSection('courses')">Courses</a></li>
+          <li><a href="#" onclick="showSection('faculty')">Facilities</a></li>
+        </ul>
+      </li>
+      <li><a href="Facultyandstaff.html">Faculty and Staff</a></li>
+      <li><a href="Announcement.html">Announcement</a></li>
+      <li><a href="Contactpage.html">Contact Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><button class="btn btn-success navbar-btn btn-auth" onclick="document.getElementById('authModal').style.display='block'">Sign In / Register</button></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <img class="img-responsive" src="iNGINEERING.jpg" alt="Engineering" style="width: 100%;">
+
+  <div class="row text-center">
+    <div class="col-xs-4 col-sm-2">
+      <div class="thumbnail">
+        <a href="BEE.png">
+          <img src="BEE.png" alt="BEE" style="width:100%">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <div class="thumbnail">
+        <a href="BSA.png">
+          <img src="BSA.png" alt="BSA" style="width:100%">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <div class="thumbnail">
+        <a href="BSBA.png">
+          <img src="BSBA.png" alt="BSBA" style="width:100%">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <div class="thumbnail">
+        <a href="BSCRIM.png">
+          <img src="BSCRIM.png" alt="BSCRIM" style="width:100%">
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-4 col-sm-2">
+      <div class="thumbnail">
+        <a href="BSIT.png">
+          <img src="BSIT.png" alt="BSIT" style="width:100%">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- General Info Section -->
+  <div id="info" class="section-content">
+    <h1>1. General Information on First Year Admission</h1>
+    <h2>Academic Year 2025 - 2026</h2>
+    <h3>Requirements for First Year Students</h3>
+    <ul class="list-group">
+      <li class="list-group-item">PSA Birth Certificate</li>
+      <li class="list-group-item">Form 137</li>
+      <li class="list-group-item">Good Moral Character</li>
+      <li class="list-group-item">2x2 Picture</li>
+      <li class="list-group-item">High School Diploma</li>
+      <li class="list-group-item">High School Credentials</li>
+    </ul>
+  </div>
+
+  <!-- Courses Section -->
+  <div id="courses" class="section-content">
+    <h1>2. Degree Programs</h1>
+    <h3>4-Year Courses</h3>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr><th>Programs</th><th>Years</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BSIT</td><td>4 Years</td></tr>
+          <tr><td>BSBA</td><td>4 Years</td></tr>
+          <tr><td>BSCRIM</td><td>4 Years</td></tr>
+          <tr><td>BSA</td><td>4 Years</td></tr>
+          <tr><td>BS ENGINEERING</td><td>4 Years</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Faculty Section -->
+  <div id="faculty" class="section-content">
+    <h1>3. Our Facilities</h1>
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="lab.jpg" class="img-responsive" alt="Lab 1">
+        <p>Modern Computer Laboratory</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="library.jpg" class="img-responsive" alt="Library">
+        <p>Updated Digital Library</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="court.jpg" class="img-responsive" alt="Gym">
+        <p>Campus Gym and Sports Center</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sign In/Register Modal -->
+<div id="authModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <form class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Student Sign In / Register</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control" placeholder="Student ID or Email" required><br>
+        <input type="password" class="form-control" placeholder="Password" required><br>
+        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+        <hr>
+        <p class="text-center">Don’t have an account? Register now</p>
+        <button type="button" class="btn btn-default btn-block">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+  function showSection(sectionId) {
+    $('.section-content').hide();
+    $('#' + sectionId).fadeIn();
+  }
+</script>
+      <footer class="footer" style="background-color: #f8f8f8; padding: 20px 0; border-top: 1px solid #ddd;">
+        <div class="container">
+          <div class="row">
+      
+            
+            <div class="col-sm-4 text-center text-sm-left">
+              <img src="PcnlLogo.png" alt="School Logo" style="height: 50px; margin-bottom: 10px;">
+              <p><strong>PCNL</strong><br>Invest Right And Make Your Future Bright</p>
+            </div>
+      
+            
+            <div class="col-sm-4 text-center">
+              <h4>Office of Admission</h4>
+              <p>📱 Cell: 0123-456789</p>
+              <p>☎ Tel: (072) 607 0406</p>
+              <p>✉ Email: pcnl0406@gmail.com</p>
+            </div>
+      
+            
+            <div class="col-sm-4 text-center text-sm-right">
+              <h4>Follow Us</h4>
+              <p>
+                <a href="https://www.facebook.com/PCNLOFFICIAL" target="_blank">
+                  <img src="fblogo.png" alt="Facebook" style="height: 24px;"> Official Page
+                </a>
+              </p>
+              <p>
+                <a href="https://www.facebook.com/profile.php?id=61551207150365" target="_blank">
+                  <img src="fblogo.png" alt="Facebook" style="height: 24px;"> 
+                  <img src="express.jpg" alt="Facebook" style="height: 24px;"> Express News
+                </a>
+              </p>
+            </div>
+      
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>
